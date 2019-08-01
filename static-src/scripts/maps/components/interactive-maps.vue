@@ -2,11 +2,11 @@
 
     <div class="container">
         <div class="columns">
-            <div class="column is-narrow">
+            <div class="column is-4">
                 <proposal-list></proposal-list>
                 <basemap-list></basemap-list>
             </div>
-            <div class="column">
+            <div class="column is-8">
                 <map-canvas></map-canvas>
                 <information v-if="mapWithVisibleInformation" :map-with-visible-information="mapWithVisibleInformation"></information>
             </div>
