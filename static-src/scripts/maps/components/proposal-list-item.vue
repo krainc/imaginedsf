@@ -12,6 +12,8 @@
             slot="parent-right"
             type="checkbox"
             v-model="mapEnabled"
+            @click="toggleCollapse"
+
         >
         <ul slot="contents" class="proposal-list-item-contents">
             <collapsible-list-item
@@ -125,6 +127,14 @@ const ProposalListItem = {
     },
 
     methods: {
+
+        toggleCollapse(){
+            if (this.$store.getters.isMapEnabled(this.map)){
+                collapsed = false
+            } else {
+                collapsed = true
+            }
+        },
 
         toggleInformationVisibility() {
             this.$store.commit(TOGGLE_INFORMATION_VISIBILITY, this.map)

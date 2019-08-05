@@ -27,9 +27,8 @@
 const CollapsibleListItem = {
 
     name: 'collapsible-list-item',
-    props: [ 'collapsible' ],
+    props: [ 'collapsible', 'collapsed' ],
     data: () => ({ collapsed: true }),
-
 }
 
 export default CollapsibleListItem
